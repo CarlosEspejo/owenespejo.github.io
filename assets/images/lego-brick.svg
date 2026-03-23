@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 160">
+  <defs>
+    <g id="stud">
+      <ellipse cx="0" cy="0" rx="11" ry="5" fill="#a8001a"/>
+      <rect x="-11" y="-8" width="22" height="8" fill="#cc0016"/>
+      <ellipse cx="0" cy="-8" rx="11" ry="5" fill="#ff4d5e"/>
+      <ellipse cx="0" cy="-8" rx="6" ry="2.8" fill="#ff6b7a"/>
+    </g>
+  </defs>
+
+  <!-- Right side face -->
+  <polygon points="140,108 200,98 200,143 140,153" fill="#a0001a"/>
+
+  <!-- Front face (tilted — left side higher, right side lower) -->
+  <polygon points="20,88 140,108 140,153 20,133" fill="#e8001c"/>
+
+  <!-- Bottom bevel -->
+  <polygon points="20,125 140,145 140,153 20,133" fill="#c8001a"/>
+
+  <!-- Top face (slants down to the right) -->
+  <polygon points="20,88 140,108 200,98 80,78" fill="#ee1428"/>
+
+  <!-- Studs — back row first -->
+
+  <!-- Row 1 (back), cy = 88 + 5i - 5, cx = 80 + 30i -->
+  <use href="#stud" transform="translate(80,83)"/>
+  <use href="#stud" transform="translate(110,88)"/>
+  <use href="#stud" transform="translate(140,93)"/>
+  <use href="#stud" transform="translate(170,98)"/>
+
+  <!-- Row 0 (front), cy = 88 + 5i, cx = 50 + 30i -->
+  <use href="#stud" transform="translate(50,88)"/>
+  <use href="#stud" transform="translate(80,93)"/>
+  <use href="#stud" transform="translate(110,98)"/>
+  <use href="#stud" transform="translate(140,103)"/>
+</svg>

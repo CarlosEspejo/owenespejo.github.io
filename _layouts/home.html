@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <h1>Hi, I'm Owen! 👋</h1>
+  <p>I love video games, art, singing, and building with LEGO.</p>
+</div>
+
+<div class="interests">
+  <div class="interest-card">
+    <span class="emoji">🎮</span>
+    <h3>Video Games</h3>
+  </div>
+  <div class="interest-card">
+    <span class="emoji">🎨</span>
+    <h3>Art</h3>
+  </div>
+  <div class="interest-card">
+    <span class="emoji">🎤</span>
+    <h3>Singing</h3>
+  </div>
+  <div class="interest-card">
+    <img src="{{ '/assets/images/lego-brick.svg' | relative_url }}" class="emoji-img" alt="LEGO brick">
+    <h3>LEGO Building</h3>
+  </div>
+</div>
+
+{% if site.posts.size > 0 %}
+<div class="posts-section">
+  <h2>Latest Posts</h2>
+  {% for post in site.posts %}
+  <a class="post-card" href="{{ post.url | relative_url }}">
+    <h3>{{ post.title }}</h3>
+    <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

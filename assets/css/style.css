@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+:root {
+  --red: #e8001c;
+  --red-dark: #b0001a;
+  --red-light: #ff4d63;
+  --yellow: #ffd60a;
+  --bg: #fff5f5;
+  --white: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #666;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--red);
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(232, 0, 28, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--white) !important;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.site-nav .page-link {
+  color: var(--white) !important;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 1rem;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.site-nav .page-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.site-nav .nav-trigger,
+.site-nav label[for="nav-trigger"] {
+  display: none;
+}
+
+/* ── HERO (home page) ── */
+.hero {
+  background: linear-gradient(135deg, var(--red) 0%, #ff6b35 100%);
+  color: var(--white);
+  padding: 80px 32px;
+  text-align: center;
+  clip-path: ellipse(100% 90% at 50% 10%);
+  padding-bottom: 100px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── INTEREST CARDS ── */
+.interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 48px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.interest-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.interest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(232, 0, 28, 0.15);
+}
+
+.interest-card .emoji {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.interest-card .emoji-img {
+  width: 100px;
+  height: 52px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.interest-card h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--red);
+}
+
+/* ── POSTS SECTION ── */
+.posts-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+}
+
+.posts-section h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.post-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  border-left: 5px solid var(--red);
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(232, 0, 28, 0.12);
+}
+
+.post-card h3 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.post-card .post-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── PAGE CONTENT ── */
+.page-content {
+  max-width: 800px;
+  margin: 48px auto;
+  padding: 0 32px;
+}
+
+.page-content h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: 24px;
+}
+
+.page-content h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 32px 0 16px;
+}
+
+.page-content p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.page-content a {
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* ── POST ── */
+.post-header {
+  margin-bottom: 32px;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1.2;
+}
+
+.post-meta {
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.post-content p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--text);
+  color: var(--white);
+  text-align: center;
+  padding: 32px;
+  margin-top: 64px;
+}
+
+.site-footer .footer-heading {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.site-footer p,
+.site-footer a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer-col-wrapper {
+  display: none;
+}
+
+/* ── WRAPPER ── */
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2.4rem; }
+  .site-header .wrapper { padding: 14px 20px; }
+  .interests { padding: 32px 20px; }
+  .posts-section { padding: 0 20px 48px; }
+}
